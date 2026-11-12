@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №2 - Завдання 2</title>
+</head>
+<body>
+    <h1>Завдання 2. Сума та добуток через функції (Варіант 19)</h1>
+    <script>
+        
+        function term(m) {
+            return (2 * m - 1) / (m + 4);
+        }
+        
+        function factor(i) {
+            return Math.pow(-1, i) * (i + 6) / (i + 8);
+        }
+       
+        let S = 0;
+        for (let m = 3; m <= 11; m++) {
+            S += term(m);
+        }
+        console.log("Сума S =", S.toFixed(5));
+
+        let Z = 1;
+        for (let i = 1; i <= 8; i++) {
+            Z *= factor(i);
+        }
+        console.log("Добуток Z =", Z.toFixed(5));
+    </script>
+</body>
+</html>

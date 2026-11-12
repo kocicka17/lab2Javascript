@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №2 - Завдання 1</title>
+</head>
+<body>
+    <h1>Завдання 1. Табулювання функції через функцію користувача (Варіант 19)</h1>
+    <script>
+        
+        function y(x) {
+            return (Math.pow(x, 2) - 2 * x) / Math.sqrt(x + 6);
+        }
+
+        console.log("--- а) Табулювання на відрізку [1; 5] з кроком 0.4 ---");
+        let a = 1, b = 5, dx = 0.4;
+        for (let x = a; x <= b + 1e-9; x += dx) {
+            console.log(`x = ${x.toFixed(2)}, y = ${y(x).toFixed(5)}`);
+        }
+
+        console.log("--- б) 5 значень, починаючи з x0 = 2 з кроком 0.3 ---");
+        let x0 = 2, dx2 = 0.3, n = 5;
+        let currentX = x0;
+        let i = 0;
+        while (i < n) {
+            console.log(`x = ${currentX.toFixed(2)}, y = ${y(currentX).toFixed(5)}`);
+            currentX += dx2;
+            i++;
+        }
+    </script>
+</body>
+</html>

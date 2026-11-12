@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №2 - Завдання 3</title>
+</head>
+<body>
+    <h1>Завдання 3. Опрацювання масиву (Варіант 19)</h1>
+    <script>
+        const X = [4.4, -2.2, 6.6, -1.1, 3.3, -5.5];
+        
+        let minAbs = Math.abs(X[0]);
+        let minIndex = 0;
+
+        for (let i = 1; i < X.length; i++) {
+            let currentAbs = Math.abs(X[i]);
+            if (currentAbs < minAbs) {
+                minAbs = currentAbs;
+                minIndex = i;
+            }
+        }
+
+        console.log("Масив X:", X);
+        console.log(`Мінімальний за модулем елемент: ${X[minIndex]} (модуль: ${minAbs}), порядковий номер: ${minIndex + 1}`);
+    </script>
+</body>
+</html>
